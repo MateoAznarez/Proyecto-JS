@@ -1,0 +1,106 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera,
+.navbar,
+.footer,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera {
+    background-color: rgb(83, 83, 83);
+}
+
+.navbar {
+    background-color: rgb(83, 83, 83) !important;
+}
+
+.titulo-principal,
+.mensaje-bienvenida {
+    text-align: center;
+}
+
+/* Sección Hero con imagen de fondo */
+.hero-section {
+    background-image: url(imagenes/6722.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero-section {
+        background-size: contain;
+        height: 50vh;
+    }
+}
+
+/* Animación del texto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-text {
+    animation: fadeIn 2s ease-in-out;
+    font-size: 3rem;
+    color: #000000;
+}
+
+/* Estilos para ajustar el tamaño de las imágenes del carrusel */
+.carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Estilos para los botones sociales en el footer */
+.btn-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-social i {
+    font-size: 20px;
+}
+
+/* Estilo general del footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    /* Ajusta padding para evitar espacio extra */
+    margin: 0;
+}
+
+.footer h5 {
+    margin-bottom: 10px;
+    /* Ajusta márgenes internos */
+}
+
+.footer p {
+    margin: 0;
+}
