@@ -6,48 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Online</title>
 
-
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
-
-
 </head>
 
-
 <body>
-
     <header class="cabecera">
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Tienda</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Inicio <span class="sr-only">(actual)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                </ul>
-            </div> -->
-        </nav>
-
         <div>
-            <h1 class="titulo-principal">Nombre De La Pagina</h1>
+            <h1 class="titulo-principal">Vive tu Espacio</h1>
             <p class="mensaje-bienvenida">Aquí encontrarás los mejores productos.</p>
         </div>
-
-
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+            <div class="container">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                    <a class="nav-link" href="pages/ambientes.html">Ambientes</a>
+                    <a class="nav-link" href="pages/productos.html">Productos</a>
+                    <a class="nav-link" href="pages/contactanos.html">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
     </header>
+
     <div class="hero-section d-flex align-items-center justify-content-center">
-        <h1 class="text-center text-black animate-text">Bienvenido a nuestra Tienda Online</h1>
+        <h1 class="text-center text-black animate-text">Bienvenido a nuestra Tienda</h1>
     </div>
+
     <div id="productCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicadores -->
         <ol class="carousel-indicators">
@@ -92,50 +76,83 @@
         </a>
     </div>
 
+    <!-- Sección de productos -->
+    <section class="productos py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Bloque de producto 1 -->
+                <div class="col-md-4 text-center mb-4">
+                    <div class="producto">
+                        <img src="imagenes/mesarato123.jpg" class="img-fluid mb-3" alt="Producto 1">
+                        <h5>Nombre del Producto 1</h5>
+                        <p>Breve descripción del producto 1.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque de producto 2 -->
+                <div class="col-md-4 text-center mb-4">
+                    <div class="producto">
+                        <img src="imagenes/florero876.jpg" class="img-fluid mb-3" alt="Producto 2">
+                        <h5>Nombre del Producto 2</h5>
+                        <p>Breve descripción del producto 2.</p>
+                    </div>
+                </div>
+
+                <!-- Bloque de producto 3 -->
+                <div class="col-md-4 text-center mb-4">
+                    <div class="producto">
+                        <img src="imagenes/898654.jpg" class="img-fluid mb-3" alt="Producto 3">
+                        <h5>Nombre del Producto 3</h5>
+                        <p>Breve descripción del producto 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Datos de contacto -->
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: contacto@tiendaonline.com</li>
+                        <li>Teléfono: +123 456 7890</li>
+                        <li>Dirección: Calle Falsa 123, Ciudad</li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="https://www.facebook.com/?locale=es_LA"
+                            class="btn btn-outline-light btn-social mx-1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/?lang=es" class="btn btn-outline-light btn-social mx-1"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" class="btn btn-outline-light btn-social mx-1"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Ubicación -->
+                <div class="col-md-4">
+                    <h5>Ubicación</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52596.13690764227!2d-58.45840223643686!3d-34.61580374064059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf5a88e34b%3A0x5e577d5a5fd9a5c9!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2ses!4v1691677749054!5m2!1ses!2ses"
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
-
 </body>
-<footer class="footer bg-dark text-white py-4">
-    <div class="container">
-        <div class="row">
-            <!-- Datos de contacto -->
-            <div class="col-md-4">
-                <h5>Contacto</h5>
-                <ul class="list-unstyled">
-                    <li>Email: contacto@tiendaonline.com</li>
-                    <li>Teléfono: +123 456 7890</li>
-                    <li>Dirección: Calle Falsa 123, Ciudad</li>
-                </ul>
-            </div>
-
-            <!-- Redes Sociales -->
-            <div class="col-md-4">
-                <h5>Síguenos</h5>
-                <div>
-                    <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <!-- Ubicación -->
-            <div class="col-md-4">
-                <h5>Ubicación</h5>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.548366833139!2d-46.63188968451987!3d-23.550519584692667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58a1e44b0e8b%3A0x5c9b2e5b0e20f8c2!2sCalle%20Falsa%20123%2C%20Ciudad!5e0!3m2!1ses-419!2sar!4v1595768236683!5m2!1ses-419!2sar"
-                    width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-            </div>
-        </div>
-        <div class="text-center mt-3">
-            <p>&copy; 2024 Tienda Online. Todos los derechos reservados.</p>
-        </div>
-    </div>
-</footer>
 
 </html>
