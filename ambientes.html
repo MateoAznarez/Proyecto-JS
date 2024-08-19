@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contáctanos - Tienda Online</title>
+    <title>Ambientes - Tienda Online</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../styles.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet"> <!-- Asegúrate de que la ruta a tu archivo CSS sea correcta -->
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <!-- Cabecera -->
     <header class="cabecera">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Tienda</a>
+            <a class="navbar-brand" href="../index.html">Tienda</a> <!-- Actualiza la ruta según sea necesario -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,49 +22,59 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
+                        <a class="nav-link" href="index.html">Inicio</a> <!-- Ruta correcta para ir al inicio -->
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ambientes.html">Ambientes</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="ambientes.html">Ambientes <span class="sr-only">(actual)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="productos.html">Productos</a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="contactanos.html">Contáctanos <span
-                                class="sr-only">(actual)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanos.html">Contáctanos</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Sección de Contacto -->
-    <section class="contacto py-5">
+    <!-- Sección de Ambientes -->
+    <section class="ambientes py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Contáctanos</h2>
-            <p class="text-center mb-5">Nos encantaría saber de ti. Completa el formulario a continuación y nos
-                pondremos en contacto contigo lo antes posible.</p>
+            <h2 class="text-center mb-4">Ambientes</h2>
+            <p class="text-center mb-5">Descubre los diferentes ambientes que ofrecemos para decorar tu hogar u oficina.
+            </p>
 
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form>
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../imagenes/ambiente1.jpg" class="card-img-top" alt="Ambiente 1">
+                        <!-- Ruta correcta -->
+                        <div class="card-body">
+                            <h5 class="card-title">Ambiente 1</h5>
+                            <p class="card-text">Descripción breve del ambiente 1.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email"
-                                placeholder="Ingresa tu correo electrónico">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../imagenes/ambiente2.jpg" class="card-img-top" alt="Ambiente 2">
+                        <!-- Ruta correcta -->
+                        <div class="card-body">
+                            <h5 class="card-title">Ambiente 2</h5>
+                            <p class="card-text">Descripción breve del ambiente 2.</p>
                         </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" rows="4"
-                                placeholder="Escribe tu mensaje"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="../imagenes/ambiente3.jpg" class="card-img-top" alt="Ambiente 3">
+                        <!-- Ruta correcta -->
+                        <div class="card-body">
+                            <h5 class="card-title">Ambiente 3</h5>
+                            <p class="card-text">Descripción breve del ambiente 3.</p>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -99,7 +109,6 @@
                     <h5>Ubicación</h5>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52596.13690764227!2d-58.45840223643686!3d-34.61580374064059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf5a88e34b%3A0x5e577d5a5fd9a5c9!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2ses!4v1691677749054!5m2!1ses!2ses"
-                        width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""
                         aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
@@ -108,10 +117,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
