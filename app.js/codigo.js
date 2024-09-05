@@ -60,7 +60,7 @@ while (opciones != "3") {
 */
 
 function Bienvenida() {
-    alert("bienvenido a nuestra tienda " + nombre_cliente + " en que podemos ayudarte")
+    alert("bienvenido a nuestra tienda " + nombre_cliente + " en que podemos ayudarte");
 
 };
 
