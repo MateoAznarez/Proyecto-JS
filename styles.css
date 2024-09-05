@@ -36,12 +36,12 @@ p {
     background-color: #555;
 }*/
 
-/* Estilo para centrar los enlaces dentro de la barra de navegación */
+
 .navbar-nav {
     margin: 0 auto;
 }
 
-/* Sección Hero con imagen de fondo */
+
 .hero-section {
     background-image: url(imagenes/6722.jpg);
     background-size: cover;
@@ -55,7 +55,7 @@ p {
     padding: 0;
 }
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .hero-section {
         background-size: contain;
@@ -63,7 +63,7 @@ p {
     }
 }
 
-/* Animación del texto */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -82,7 +82,7 @@ p {
     color: #000000;
 }
 
-/* Estilos para ajustar el tamaño de las imágenes del carrusel */
+
 .carousel-item img {
     max-height: 500px;
     object-fit: cover;
@@ -105,7 +105,7 @@ p {
     color: #555;
 }
 
-/* Estilos para los botones sociales en el footer */
+
 .btn-social {
     width: 40px;
     height: 40px;
@@ -119,18 +119,18 @@ p {
     font-size: 20px;
 }
 
-/* Estilo general del footer */
+
 .footer {
     background-color: #343a40;
     color: white;
     padding: 20px 0;
-    /* Ajusta padding para evitar espacio extra */
+
     margin: 0;
 }
 
 .footer h5 {
     margin-bottom: 10px;
-    /* Ajusta márgenes internos */
+
 }
 
 .footer p {

@@ -1,8 +1,5 @@
+/*
 
-function bienvenida() {
-    alert("bienvenido a nuestra tienda " + nombre_cliente + " en que podemos ayudarte")
-
-};
 
 function comprar_decoracion() {
 
@@ -36,14 +33,14 @@ function precio_total() {
 }
 
 
-let nombre_cliente = prompt("ingrese su nombre");
+
 let cafetera = 12000;
 let isla_moderna = 30000;
 let sofa_minimal = 13000;
 let iva = 1.21;
 let opciones;
 
-
+console.log(cafetera);
 
 bienvenida();
 opciones = prompt(
@@ -60,3 +57,60 @@ while (opciones != "3") {
         opciones = "3";
     }
 }
+*/
+
+function Bienvenida() {
+    alert("bienvenido a nuestra tienda " + nombre_cliente + " en que podemos ayudarte")
+
+};
+
+let nombre_cliente = prompt("ingrese su nombre");
+
+
+function Producto(nombre, detalle, precio) {
+    this.nombre = nombre;
+    this.detalle = detalle;
+    this.precio = precio;
+    this.listar = function () {
+        return `${this.nombre} - ${this.detalle} - $${this.precio.toFixed(2)}`;
+    };
+}
+
+
+const producto1 = new Producto("Sofá Minimal", "Sofá moderno de tres cuerpos disponible en distintos tonos", 1250);
+const producto2 = new Producto("Lámpara White", "Lámpara minimalista color blanco", 1730);
+const producto3 = new Producto("Cafetera", "Cafetera para expresos con espumador", 2400);
+const producto4 = new Producto("Jarrón Doble", "Juego de jarrones decorativos disponibles en negro y blanco", 1150);
+const producto5 = new Producto("Silla Otis", "Silla moderna y minimalista ideal para complementar tus espacios", 2430);
+
+
+const listaProductos = [producto1, producto2, producto3, producto4, producto5];
+
+
+function seleccionarProductoYCalcularIVA(lista, porcentajeIVA) {
+
+    const opciones = lista.map((producto, index) => `${index + 1}. ${producto.listar()}`).join('\n');
+
+
+    const seleccion = prompt(`Seleccione un producto ingresando el número correspondiente:\n\n${opciones}`);
+
+
+    const indiceSeleccionado = parseInt(seleccion) - 1;
+
+
+    if (indiceSeleccionado >= 0 && indiceSeleccionado < lista.length) {
+        const productoSeleccionado = lista[indiceSeleccionado];
+        const precioConIVA = productoSeleccionado.precio * (1 + porcentajeIVA);
+
+
+        alert(`Ha seleccionado: ${productoSeleccionado.nombre}\nPrecio con IVA (21%): $${precioConIVA.toFixed(2)}`);
+    } else {
+        alert("Selección no válida. Por favor, intente de nuevo.");
+    }
+}
+
+
+
+Bienvenida();
+
+seleccionarProductoYCalcularIVA(listaProductos, 0.21);
