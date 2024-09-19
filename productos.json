@@ -1,0 +1,34 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "silla",
+            "precio": 42.99
+        },
+        {
+            "id": 2,
+            "nombre": "cafetera",
+            "precio": 80.30
+        },
+        {
+            "id": 3,
+            "nombre": "florero",
+            "precio": 127.70
+        },
+        {
+            "id": 4,
+            "nombre": "mesa",
+            "precio": 250.25
+        },
+        {
+            "id": 5,
+            "nombre": "jarron",
+            "precio": 48.60
+        },
+        {
+            "id": 6,
+            "nombre": "sofa",
+            "precio": 300.78
+        }
+    ]
+}

@@ -2,11 +2,17 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - Tienda Online</title>
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../styles.css" rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -38,154 +44,59 @@
         </nav>
     </header>
 
+    <div class="container mt-4">
+        <div id="product-list" class="row"></div> <!-- Rejilla para productos -->
+    </div>
 
-    <!-- Sección de Productos -->
-    <section class="productos py-5">
+    <!-- Sección del carrito -->
+    <div class="container mt-4">
+        <h2>Carrito</h2>
+        <div id="cart-section">
+            <div id="cart-items" class="row"></div>
+            <h3>Total: $<span id="cart-total">0.00</span></h3> <!-- Mostrar el total del carrito -->
+            <button id="clear-cart" class="btn btn-danger mt-3">Vaciar Carrito</button>
+            <!-- Botón para vaciar el carrito -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
         <div class="container">
-            <h2 class="text-center mb-4">Productos</h2>
-            <p class="text-center mb-5">Explora nuestra amplia gama de productos cuidadosamente seleccionados para ti.
-            </p>
-
             <div class="row">
-                <!-- Producto 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/Productos-de-seccion/producto01.jpg" class="img-fluid mb-3" alt="Producto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Descripción breve del producto 1.</p>
-                        </div>
+                <!-- Datos de contacto -->
+                <div class="col-md-4">
+                    <h5>Contacto</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: contacto@tiendaonline.com</li>
+                        <li>Teléfono: +123 456 7890</li>
+                        <li>Dirección: Calle Falsa 123, Ciudad</li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="col-md-4">
+                    <h5>Síguenos</h5>
+                    <div>
+                        <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
 
-                <!-- Producto 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src=imagenes/Productos-de-seccion/producto02.jpg class="card-img-top" alt="Producto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 2</h5>
-                            <p class="card-text">Descripción breve del producto 2.</p>
-                        </div>
-                    </div>
+                <!-- Ubicación -->
+                <div class="col-md-4">
+                    <h5>Ubicación</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52596.13690764227!2d-58.45840223643686!3d-34.61580374064059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf5a88e34b%3A0x5e577d5a5fd9a5c9!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2ses!4v1691677749054!5m2!1ses!2ses"
+                        width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
                 </div>
-
-                <!-- Producto 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/Productos-de-seccion/producto03.jpg" class="card-img-top" alt="Producto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 3</h5>
-                            <p class="card-text">Descripción breve del producto 3.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/Productos-de-seccion/producto04.jpg" class="card-img-top" alt="Producto 4">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 4</h5>
-                            <p class="card-text">Descripción breve del producto 4.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 5 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/Productos-de-seccion/producto05.jpg" class="card-img-top" alt="Producto 5">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 5</h5>
-                            <p class="card-text">Descripción breve del producto 5.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 6 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/Productos-de-seccion/producto06.jpg" class="card-img-top" alt="Producto 6">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 6</h5>
-                            <p class="card-text">Descripción breve del producto 6.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 7 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/Productos-de-seccion/producto07.jpg" class="card-img-top" alt="Producto 7">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 7</h5>
-                            <p class="card-text">Descripción breve del producto 7.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 8 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/Productos-de-seccion/producto08.jpg" class="card-img-top" alt="Producto 8">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 8</h5>
-                            <p class="card-text">Descripción breve del producto 8.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Producto 9 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="imagenes/maceta321.jpg" class="card-img-top" alt="Producto 9">
-                        <div class="card-body">
-                            <h5 class="card-title">Producto 9</h5>
-                            <p class="card-text">Descripción breve del producto 9.</p>
-                        </div>
-                    </div>
-                </div>
-
-
-    </section>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-
-<!-- Footer -->
-<footer class="footer bg-dark text-white py-4">
-    <div class="container">
-        <div class="row">
-            <!-- Datos de contacto -->
-            <div class="col-md-4">
-                <h5>Contacto</h5>
-                <ul class="list-unstyled">
-                    <li>Email: contacto@tiendaonline.com</li>
-                    <li>Teléfono: +123 456 7890</li>
-                    <li>Dirección: Calle Falsa 123, Ciudad</li>
-                </ul>
-            </div>
-
-            <!-- Redes Sociales -->
-            <div class="col-md-4">
-                <h5>Síguenos</h5>
-                <div>
-                    <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="btn btn-outline-light btn-social mx-1"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-
-            <!-- Ubicación -->
-            <div class="col-md-4">
-                <h5>Ubicación</h5>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52596.13690764227!2d-58.45840223643686!3d-34.61580374064059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacf5a88e34b%3A0x5e577d5a5fd9a5c9!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses!2ses!4v1691677749054!5m2!1ses!2ses"
-                    width="100%" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
             </div>
         </div>
-        <div class="text-center mt
-        
+    </footer>
+
+
+    <script src="app.js/codigo.js"></script>
+</body>
+
+</html>
