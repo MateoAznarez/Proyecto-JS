@@ -7,115 +7,118 @@
     <title>Tienda Online</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <script src="app.js/codigo.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link href="style/styles.css" rel="stylesheet">
+    <script defer src="app.js/codigo.js"></script>
 </head>
 
-
 <body>
+    <header class="bg-dark text-white py-3 mb-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
 
-    <header class="cabecera">
-        <div>
-            <h1 class="titulo-principal">Vive tu Espacio</h1>
-            <p class="mensaje-bienvenida">Aquí encontrarás los mejores productos.</p>
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
-            <div class="container">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                    <a class="nav-link" href="ambientes.html">Ambientes</a>
-                    <a class="nav-link" href="productos.html">Productos</a>
-                    <a class="nav-link" href="contactanos.html">Contáctanos</a>
-                </div>
+                <h1 class="h3 mb-0">Ornament Deco </h1>
             </div>
-        </nav>
+            <a href="#Produc" class="btn btn-outline-light">Ver Productos</a>
+        </div>
     </header>
 
-    <div class="hero-section d-flex align-items-center justify-content-center">
-        <h1 class="text-center text-black animate-text">Bienvenido a nuestra Tienda</h1>
-    </div>
-
-    <div id="productCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicadores -->
-        <ol class="carousel-indicators">
-            <li data-target="#productCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#productCarousel" data-slide-to="1"></li>
-            <li data-target="#productCarousel" data-slide-to="2"></li>
-        </ol>
-
-        <!-- Imágenes del Carrusel -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imagenes/isla543.jpg" class="d-block w-100" alt="Producto 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Producto 1</h5>
-                    <p>Descripción del Producto 1</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/MESA123.jpg" class="d-block w-100" alt="Producto 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Producto 2</h5>
-                    <p>Descripción del Producto 2</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes/sofa674.jpg" class="d-block w-100" alt="Producto 3">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Producto 3</h5>
-                    <p>Descripción del Producto 3</p>
-                </div>
-            </div>
-        </div>
-
-
-        <a class="carousel-control-prev" href="#productCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#productCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-
-    <!-- Sección de productos -->
-    <section class="productos py-5">
+    <!-- Sección de bienvenida -->
+    <section class="welcome-section py-5 bg-light text-center">
         <div class="container">
-            <div class="row justify-content-center">
+            <h2 class="mb-4 text-primary">Bienvenido a nuestra tienda</h2>
+            <p class="lead text-secondary">Esperamos que encuentres todo lo que buscas para darle estilo a tus espacios
+            </p>
 
-                <div class="col-md-4 text-center mb-4">
-                    <div class="producto">
-                        <img src="imagenes/mesarato123.jpg" class="img-fluid mb-3" alt="Producto 1">
-                        <h5>Nombre del Producto 1</h5>
-                        <p>Breve descripción del producto 1.</p>
+            <!-- Carrusel -->
+            <div id="carouselExample" class="carousel slide mb-4" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/isla543.jpg" class="d-block w-100 rounded" alt="Imagen 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/kaboompics_luxur.jpg" class="d-block w-100 rounded" alt="Imagen 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/MESA123.jpg" class="d-block w-100 rounded" alt="Imagen 3">
                     </div>
                 </div>
-
-
-                <div class="col-md-4 text-center mb-4">
-                    <div class="producto">
-                        <img src="imagenes/florero876.jpg" class="img-fluid mb-3" alt="Producto 2">
-                        <h5>Nombre del Producto 2</h5>
-                        <p>Breve descripción del producto 2.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4 text-center mb-4">
-                    <div class="producto">
-                        <img src="imagenes/898654.jpg" class="img-fluid mb-3" alt="Producto 3">
-                        <h5>Nombre del Producto 3</h5>
-                        <p>Breve descripción del producto 3.</p>
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </section>
 
+
+    <div class="container mt-4">
+        <h2 id="Produc">Productos</h2>
+        <div id="product-list" class="row"></div> <!-- Rejilla para productos -->
+    </div>
+
+    <div class="container mt-4">
+        <h2>Carrito</h2>
+        <div id="cart-section">
+            <div id="cart-items" class="row"></div>
+            <h3>Total: $<span id="cart-total">0.00</span></h3>
+            <button id="clear-cart" class="btn btn-danger mt-3">Vaciar Carrito</button>
+            <button id="checkout-button" class="btn btn-success mt-3" data-toggle="modal"
+                data-target="#checkout-modal">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- Modal para finalizar compra -->
+    <div class="modal fade" id="checkout-modal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Finalizar Compra</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="checkout-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Dirección</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment-method">Método de Pago</label>
+                            <select class="form-control" id="payment-method" required>
+                                <option value="">Seleccione...</option>
+                                <option value="credit">Tarjeta de Crédito</option>
+                                <option value="debit">Tarjeta de Débito</option>
+                                <option value="paypal">PayPal</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="submit-checkout">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer bg-dark text-white py-4">
         <div class="container">
             <div class="row">
-
                 <div class="col-md-4">
                     <h5>Contacto</h5>
                     <ul class="list-unstyled">
@@ -124,21 +127,19 @@
                         <li>Dirección: Calle Falsa 123, Ciudad</li>
                     </ul>
                 </div>
-
-
                 <div class="col-md-4">
                     <h5>Síguenos</h5>
                     <div>
                         <a href="https://www.facebook.com/?locale=es_LA"
-                            class="btn btn-outline-light btn-social mx-1"><i class="fab fa-facebook-f"></i></a>
+                            class="btn btn-outline-light btn-social mx-1"><i class="fab fa-facebook-f"></i> <img
+                                src="imagenes/facebook_6422199.png" alt=""></a>
                         <a href="https://x.com/?lang=es" class="btn btn-outline-light btn-social mx-1"><i
-                                class="fab fa-twitter"></i></a>
+                                class="fab fa-twitter"></i> <img src="imagenes/twitter-alt-circle_12107562.png"
+                                alt=""></a>
                         <a href="https://www.instagram.com/" class="btn btn-outline-light btn-social mx-1"><i
-                                class="fab fa-instagram"></i></a>
+                                class="fab fa-instagram"></i> <img src="imagenes/instagram_6422200.png" alt=""> </a>
                     </div>
                 </div>
-
-
                 <div class="col-md-4">
                     <h5>Ubicación</h5>
                     <iframe
@@ -153,8 +154,8 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 </body>
 
 </html>

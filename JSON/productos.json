@@ -1,0 +1,67 @@
+{
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Cafetera Dilusy",
+            "precio": 150,
+            "imagen": "imagenes/Productos-de-seccion/producto01.jpg",
+            "descripcion": "Disfruta de un café recién hecho en casa con esta elegante cafetera. Su diseño moderno y funcionalidad intuitiva aseguran una experiencia de café excepcional"
+        },
+        {
+            "id": 2,
+            "nombre": "Mesa Freto",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/pro02.jpg",
+            "descripcion": " Complementa tu sala de estar con esta mesa, Su diseño funcional y atractivo la convierte en un punto focal ideal para tus bebidas, libros y decoración."
+        },
+        {
+            "id": 3,
+            "nombre": "Hornos Indiviudales Ignis",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/producto03.jpg",
+            "descripcion": "Dale un toque sofisticado y distitnot a tu cocina con esta pareja de hornos "
+        },
+        {
+            "id": 4,
+            "nombre": "Sofa Hiems ",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/producto04.jpg",
+            "descripcion": "Transforma tu espacio con este elegante sofá, que combina modernidad y comodidad en un solo diseño proporcionando un toque de frescura y luminosidad a tu sala"
+        },
+        {
+            "id": 5,
+            "nombre": "Escritorio Modus",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/producto05.jpg",
+            "descripcion": "Mejora tu espacio de trabajo con nuestro escritorio modus ,Su diseño contemporáneo y funcionalidad optimizada ofrecen un entorno cómodo y productivo"
+        },
+        {
+            "id": 6,
+            "nombre": "Barra Onix",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/producto06.jpg",
+            "descripcion": "Agrega un toque contemporáneo a tu hogar , su diseño moderno y versátil la convierte en una pieza distinguida para cualquier espacio"
+        },
+        {
+            "id": 7,
+            "nombre": "Florero Utis",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/pro07.jpg",
+            "descripcion": "Añade un toque de frescura a tu hogar con este hermoso jarrón. Su diseño elegante y versátil lo hace ideal para exhibir flores o como un atractivo decorativo en cualquier habitación"
+        },
+        {
+            "id": 8,
+            "nombre": "Sofa Chester",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/por08.jpg",
+            "descripcion": "Relájate con estilo en este sofisticado sillón de cuero. Su diseño atemporal y elegancia, lo convirtién en el complemento perfecto para cualquier sala de estar."
+        },
+        {
+            "id": 9,
+            "nombre": "Jarron Victoria",
+            "precio": 42.99,
+            "imagen": "imagenes/Productos-de-seccion/pro09.jpg",
+            "descripcion": "Este jarrón distintivo es perfecto para embellecer cualquier espacio. Su diseño atractivo y moderno se adapta a diferentes estilos de decoración"
+        }
+    ]
+}
