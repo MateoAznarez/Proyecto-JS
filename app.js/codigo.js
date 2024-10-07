@@ -1,4 +1,3 @@
-// Función para cargar los productos desde un archivo JSON utilizando async/await
 async function cargarProductos() {
     try {
         const response = await fetch('JSON/productos.json');
@@ -9,10 +8,9 @@ async function cargarProductos() {
     }
 }
 
-// Función que muestra los productos en la página con estilo Bootstrap
 function mostrarProductos(productos) {
     const productList = document.getElementById('product-list');
-    productList.innerHTML = ''; // Limpiar lista de productos antes de mostrar los nuevos
+    productList.innerHTML = '';
 
     productos.forEach(producto => {
         const productCol = document.createElement('div');
@@ -54,49 +52,42 @@ function mostrarProductos(productos) {
     });
 }
 
-// Modificar la función para manejar productos duplicados incrementando la cantidad
 function agregarAlCarrito(producto) {
     try {
         let carrito = obtenerCarrito();
         const productoExistente = carrito.find(item => item.id === producto.id);
 
-        if (productoExistente) {
-            productoExistente.cantidad += 1; // Incrementar cantidad si el producto ya existe
-        } else {
-            producto.cantidad = 1; // Inicializar cantidad si es un producto nuevo
-            carrito.push(producto); // Añadir producto al carrito
-        }
+        productoExistente ? productoExistente.cantidad += 1 : (producto.cantidad = 1, carrito.push(producto));
 
         localStorage.setItem('carrito', JSON.stringify(carrito));
-        mostrarCarrito(); // Actualizar vista del carrito
+        mostrarCarrito();
     } catch (error) {
         console.error('Error al agregar producto al carrito:', error);
     }
 }
 
-// Función para obtener el carrito desde LocalStorage
+
 function obtenerCarrito() {
     return JSON.parse(localStorage.getItem('carrito')) || [];
 }
 
-// Función para calcular el total del carrito
+
 function calcularTotalCarrito() {
     const carrito = obtenerCarrito();
     return carrito.reduce((acc, producto) => acc + (producto.precio * producto.cantidad), 0).toFixed(2); // Devolver total con 2 decimales
 }
 
-// Función para mostrar el carrito en la página
+
 function mostrarCarrito() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
-    cartItems.innerHTML = ''; // Limpiar vista del carrito
+    cartItems.innerHTML = '';
 
     const carrito = obtenerCarrito();
     carrito.forEach((producto, index) => {
         const cartItem = document.createElement('p');
         cartItem.textContent = `${producto.nombre} - $${producto.precio} x ${producto.cantidad}`;
 
-        // Botón para eliminar el producto
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Eliminar';
         removeButton.classList.add('btn', 'btn-danger', 'ml-2');
@@ -109,87 +100,111 @@ function mostrarCarrito() {
     cartTotal.textContent = calcularTotalCarrito();
 }
 
-// Función para eliminar un producto del carrito
+
 function eliminarProductoCarrito(index) {
     let carrito = obtenerCarrito();
-    carrito.splice(index, 1); // Eliminar producto según el índice
+    carrito.splice(index, 1);
     localStorage.setItem('carrito', JSON.stringify(carrito));
-    mostrarCarrito(); // Actualizar vista del carrito
+    mostrarCarrito();
 }
 
-// Función para vaciar el carrito y limpiar la vista
 function vaciarCarrito() {
-    localStorage.clear(); // Limpiar LocalStorage
-    limpiarFrontendCarrito(); // Limpiar el frontend
+    localStorage.clear();
+    limpiarFrontendCarrito();
 }
 
-// Función para limpiar el frontend del carrito
+
 function limpiarFrontendCarrito() {
     const cartItems = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
     cartItems.innerHTML = '';
-    cartTotal.textContent = '0.00'; // Resetear total a 0
+    cartTotal.textContent = '0.00';
 }
 
-// Mostrar el modal de checkout al hacer clic en el botón "Finalizar Compra"
 document.getElementById('checkout-button').addEventListener('click', () => {
-    $('#checkout-modal').modal('show'); // Usamos el modal de Bootstrap
+    $('#checkout-modal').modal('show');
 });
 
-// Validaciones de formulario y envío de datos
-document.getElementById('submit-checkout').addEventListener('click', (e) => {
-    e.preventDefault(); // Prevenir recarga de página
 
-    // Obtener valores del formulario
+document.getElementById('submit-checkout').addEventListener('click', (e) => {
+    e.preventDefault();
+
     const nombre = document.getElementById('name').value.trim();
     const direccion = document.getElementById('address').value.trim();
     const email = document.getElementById('email').value.trim();
     const metodoPago = document.getElementById('payment-method').value;
 
-    // Validaciones básicas (programación defensiva)
     if (!nombre) {
-        alert('Por favor, ingrese su nombre completo.');
+        swal({
+            title: "Oops!",
+            text: "Necesitamos tu nombre completo.",
+            icon: "warning",
+            button: {
+                text: "Entendido",
+                className: "btn btn-warning"
+            },
+        });
         return;
     }
     if (!direccion) {
-        alert('Por favor, ingrese su dirección.');
+        swal({
+            title: "Oops!",
+            text: "Por favor, ingresa tu dirección.",
+            icon: "warning",
+            button: {
+                text: "Entendido",
+                className: "btn btn-warning"
+            },
+        });
         return;
     }
     if (!email || !validarEmail(email)) {
-        alert('Por favor, ingrese un email válido.');
+        swal({
+            title: "Error en el correo",
+            text: "El correo proporcionado no es válido. Inténtalo nuevamente.",
+            icon: "error",
+            button: {
+                text: "Reintentar",
+                className: "btn btn-danger"
+            },
+        });
         return;
     }
     if (!metodoPago) {
-        alert('Por favor, seleccione un método de pago.');
+        swal({
+            title: "Método de pago faltante",
+            text: "Por favor, selecciona un método de pago antes de proceder.",
+            icon: "info",
+            button: {
+                text: "Seleccionar",
+                className: "btn btn-info"
+            },
+        });
         return;
     }
-
-    // Si todas las validaciones pasan, mostramos un mensaje de éxito
     swal({
-        title: "¡Compra finalizada!",
-        text: "Gracias por tu compra. ¡Esperamos verte pronto!",
+        title: "¡Compra exitosa!",
+        text: "Gracias por tu compra. ¡Te esperamos pronto!",
         icon: "success",
-        button: "Cerrar",
+        button: {
+            text: "Cerrar",
+            className: "btn btn-success"
+        },
     });
-    // Ocultar el modal
+
     $('#checkout-modal').modal('hide');
 
-    // Vaciar el carrito y limpiar localStorage
     vaciarCarrito();
 
-    // Reiniciar el formulario
     document.getElementById('checkout-form').reset();
 });
 
-// Función para validar un email
 function validarEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
-// Añadir evento al botón para vaciar el carrito
-document.getElementById("clear-cart").addEventListener('click', vaciarCarrito); // Cambié aquí
+document.getElementById("clear-cart").addEventListener('click', vaciarCarrito);
 
-// Cargar los productos y mostrar el carrito al cargar la página
 cargarProductos();
 mostrarCarrito();
